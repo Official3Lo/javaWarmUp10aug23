@@ -1,49 +1,40 @@
 // use the Scanner class
 import java.util.Scanner;
-
 public class Anything {
-    public static void main(String[] args){
+    public static void main (String[] args){ //remember this
+        System.out.println("\n\n Welcome to the largest numbers program\n\n"); // print to your monitor
         int num1 = 0;
         int num2 = 0;
         int num3 = 0;
-        int largestNum = 0;
+
+        Scanner myScanner = new Scanner(System.in);
+
+        // Prompt the user for the first number
+        System.out.println("\n\nPlease enter the first number\n\n");
+        int num1 = myScanner.nextInt();
+
+        System.out.println("you entered: " + num1);
 
 
+        System.out.println("\n\nPlease enter the second number\n\n");
+        int num2 = myScanner.nextInt();
 
-        System.out.println("\n\n Welcome to the largest numbers program! \n\n");
+        System.out.println("you entered: " + num2);
 
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n\nPlease enter the third number\n\n");
+        int num3 = myScanner.nextInt();
 
-        // Prompt the user for the first number.
-        System.out.println("\n Please enter the first number: ");
-        num1 = scanner.nextInt();
-        System.out.println("\n you entered: " + num1);
+        System.out.println("you entered: " + num3);
 
-        // Prompt the user for the second number.
-        System.out.println("\n Please enter the second number: ");
-        num2 = scanner.nextInt();
-        System.out.println("\n you entered: " + num2);
 
-        // Prompt the user for the third number.
-        System.out.println("\n Please enter the third number: ");
-        num3 = scanner.nextInt();
-        System.out.println("\n you entered: " + num3);
-
-        System.out.println("\n The numbers are: " + num1 + " and " + num2 + " and " + num3);
-
-        // Find the largest number
-        largestNum = num1;
-
-        if (num2 > largestNum) {
-            largestNum = num2;
+        System.out.println("\n\nAll the numbers you had entered are: \n\n" + num1 + "and" + num2 + "and" + num3);
+        int largest = num1;
+        if (num2 > largest){
+            largest = num2;
         }
-
-        if (num3 > largestNum) {
-            largestNum = num3;
+        if (num3>largest){
+            largest = num3;
         }
-
-        // Display the largest number.
-        System.out.println("\n The largest number is: " + largestNum);
-
+        System.out.println("\n\nThe largest number is: \n\n" + largest);
     }
 }
